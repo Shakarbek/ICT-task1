@@ -1,9 +1,21 @@
-# chocolate bar k-slices
-n=int(input())
-m=int(input())
-k=int(input())
+s=input()
+lower=0
+upper=0
 
-if k%n==0 or k%m==0:
-    print("YES")
+for t in s:
+    if (t.islower())==True:
+        lower+=1
+    elif (t.isupper())==True:
+        upper+=1
+
+print(upper)
+print(lower)
+
+if lower>upper:
+    s=s.lower()
+elif upper>lower:
+    s=s.upper()
 else:
-    print("NO")
+    s=s.lower()
+
+print(s)

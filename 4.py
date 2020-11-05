@@ -1,10 +1,17 @@
-# королева - горизонтально, вертикально, по диагонали
-x1=int(input())
-y1=int(input())
-x2=int(input())
-y2=int(input())
+s=input()
+one=0
+zero=0
 
-if abs(x1-x2)==abs(y1-y2) or x1==x2 or y1==y2:
+for i in range(0, len(s)):
+    if s[i]=="1":
+        one+=1
+        zero=0
+    else:
+        zero+=1
+        one=0
+    if zero==7 or one==7:
+        break
+
+if zero==7 or one==7:
     print("YES")
-else:
-    print("NO")
+else:print("NO")

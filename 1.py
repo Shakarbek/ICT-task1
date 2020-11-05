@@ -1,10 +1,12 @@
-# ладья - горизонтально или вертикально
-x1=int(input())
-y1=int(input())
-x2=int(input())
-y2=int(input())
-
-if x1==x2 or y1==y2:
-    print("YES")
-else:
-    print("NO")
+str=input()
+s=str.lower()
+for x in s:
+    if x=="a" or x=="e" or x=="i" or x=="u" or x=="o" or x=="y":
+        s=s.replace(x,"")
+    # else:
+    #     s[i-1]="."
+t=""
+for i in range(0, len(s)):
+    t+="."
+    t+=s[i]
+print(t)

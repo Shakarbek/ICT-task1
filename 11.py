@@ -1,7 +1,10 @@
-n= int(input())
-k=2
-while k<=n:
-    if n%k==0:
-        break
-    k+=1
-print(k)
+n=int(input())
+s=input()
+t=""
+for char in s:
+    if char=="z":
+        t+='0 '
+    elif char=='n':
+        t+='1 '
+
+print(t)
